@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ArchitectureComponentsSample</string>
+    <string name="search">Buscar</string>
+    <string name="input_hint">Escribe para buscar</string>
+</resources>
