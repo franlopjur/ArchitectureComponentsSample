@@ -2,4 +2,7 @@
     <string name="app_name">ArchitectureComponentsSample</string>
     <string name="search">Buscar</string>
     <string name="input_hint">Escribe para buscar</string>
+
+    <string name="response_error">Error al cargar los datos</string>
+    <string name="service_error">Error al realizar la llamada</string>
 </resources>

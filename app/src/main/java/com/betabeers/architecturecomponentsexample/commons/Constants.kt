@@ -2,15 +2,12 @@ package com.betabeers.architecturecomponentsexample.commons
 
 //region Common
 val BASE_URL = "https://api.github.com/"
-val DB_NAME = "androidCertificationDatabase"
-val ITEMS_PER_PAGE_DB = 20
-val ITEMS_PER_PAGE_NETWORK = 50
-val PREFETCH_DISTANCE = 5
+val DB_NAME = "architectureComponentsSampleDatabase"
 //endregion
 
 //region DB CONSTANTS
-val DB__GITHUB_REPO__TABLE_NAME = "GithubRepos"
-val DB__GITHUB_REPO__FULL_NAME = "full_name"
+const val DB__GITHUB_REPO__TABLE_NAME = "GithubRepos"
+const val DB__GITHUB_REPO__FULL_NAME = "full_name"
 //endregion
 
 //region DTO CONSTANTS

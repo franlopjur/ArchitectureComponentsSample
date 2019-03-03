@@ -39,8 +39,8 @@ dependencies {
     implementation "android.arch.lifecycle:runtime:$archComponentsVersion"
     implementation "android.arch.persistence.room:runtime:$roomVersion"
     implementation "android.arch.paging:runtime:$pagingVersion"
-    annotationProcessor "android.arch.lifecycle:compiler:$archComponentsVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    kapt "android.arch.lifecycle:compiler:$archComponentsVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
 
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"

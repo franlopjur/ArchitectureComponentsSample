@@ -10,6 +10,7 @@ class ApiService {
     companion object {
         @Volatile
         private var sRetrofitInstance: Retrofit? = null
+
         @Volatile
         private var sClient: OkHttpClient? = null
 
@@ -22,7 +23,7 @@ class ApiService {
                     .build()
             }
 
-        fun getClientInstance() : OkHttpClient =
+        private fun getClientInstance() : OkHttpClient =
                 sClient ?: synchronized(this) {
                     sClient ?: OkHttpClient.Builder()
                         .addInterceptor(getLogger())

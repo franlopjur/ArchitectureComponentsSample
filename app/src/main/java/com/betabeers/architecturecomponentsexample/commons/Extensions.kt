@@ -1,7 +1,7 @@
 package com.betabeers.architecturecomponentsexample.commons
 
-fun Any?.notNull(f: ()-> Unit){
+fun Any?.notNull(functionToExecute: ()-> Unit){
     if (this != null){
-        f()
+        functionToExecute()
     }
 }
