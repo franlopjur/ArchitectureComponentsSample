@@ -1,5 +1,9 @@
 package com.betabeers.architecturecomponentsexample.commons
 
+val ITEMS_PER_PAGE_DB = 20
+val ITEMS_PER_PAGE_NETWORK = 50
+val PREFETCH_DISTANCE = 5
+
 //region Common
 val BASE_URL = "https://api.github.com/"
 val DB_NAME = "architectureComponentsSampleDatabase"

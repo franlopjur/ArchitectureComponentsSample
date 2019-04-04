@@ -6,6 +6,11 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface GithubService {
+
     @GET("search/repositories?sort=stars")
-    fun searchRepositories(@Query("q") query: String): Call<GithubRepoSearchDto>
+    fun searchRepositories(@Query("q") query: String,
+                           @Query("page") page: Int,
+                           @Query("per_page") itemPerPage: Int): Call<GithubRepoSearchDto>
+
+
 }

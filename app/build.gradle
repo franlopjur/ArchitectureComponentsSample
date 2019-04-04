@@ -38,7 +38,9 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$archComponentsVersion"
     implementation "android.arch.lifecycle:runtime:$archComponentsVersion"
     implementation "android.arch.persistence.room:runtime:$roomVersion"
+
     implementation "android.arch.paging:runtime:$pagingVersion"
+
     kapt "android.arch.lifecycle:compiler:$archComponentsVersion"
     kapt "android.arch.persistence.room:compiler:$roomVersion"
 

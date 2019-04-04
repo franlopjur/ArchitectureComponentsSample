@@ -5,4 +5,6 @@
 
     <string name="response_error">Error al cargar los datos</string>
     <string name="service_error">Error al realizar la llamada</string>
+
+    <string name="row_info_format">%d - %s</string>
 </resources>

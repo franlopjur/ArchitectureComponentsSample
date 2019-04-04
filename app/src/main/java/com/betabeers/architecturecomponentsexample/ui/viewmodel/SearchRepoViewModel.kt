@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.ViewModel
+import android.arch.paging.PagedList
 import com.betabeers.architecturecomponentsexample.data.GithubRepository
 import com.betabeers.architecturecomponentsexample.model.domain.GithubRepoDomain
 
@@ -15,7 +16,7 @@ class SearchRepoViewModel : ViewModel() {
 
     var errorMessageLiveData: LiveData<String>
 
-    val githubReposListLiveData: LiveData<List<GithubRepoDomain>> =
+    val githubReposListLiveData: LiveData<PagedList<GithubRepoDomain>> =
         Transformations.switchMap(queryLiveData) { query -> search(query) }
 
     //endregion
@@ -31,7 +32,7 @@ class SearchRepoViewModel : ViewModel() {
     //endregion
 
     //region Private Methods
-    private fun search(query: String): LiveData<List<GithubRepoDomain>> {
+    private fun search(query: String): LiveData<PagedList<GithubRepoDomain>> {
         return githubRepository.searchRepos(query)
     }
     //endregion

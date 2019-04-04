@@ -1,6 +1,6 @@
-package com.betabeers.architecturecomponentsexample.dp.dao
+package com.betabeers.architecturecomponentsexample.db.dao
 
-import android.arch.lifecycle.LiveData
+import android.arch.paging.DataSource
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy
@@ -13,5 +13,9 @@ interface GithubRepoDao {
     fun insert(repoList: List<GithubRepoDomain>)
 
     @Query("SELECT * FROM GithubRepos WHERE (name LIKE :query) OR (description LIKE :query)")
-    fun getReposAsync(query: String): LiveData<List<GithubRepoDomain>>
+    fun getReposAsync(query: String): DataSource.Factory<Int, GithubRepoDomain>
+
+    @Query("SELECT * FROM GithubRepos WHERE (name LIKE :query) OR (description LIKE :query)")
+    fun getRepos(query: String): List<GithubRepoDomain>
+
 }
